@@ -5,7 +5,6 @@ import Deck from  './deck.js';
 import Reset from  './reset.js';
 
 import './main.css';
-
 export default class Main extends Component {
     static getRootClass() {
         return '.main';
@@ -13,9 +12,9 @@ export default class Main extends Component {
 
     constructor(root) {
         super(root);
-
+        
         this.navbar = new Navbar(root.querySelector('.navbar'));
-
+        this.navbar.on('changeMode', this.handleChangeMode.bind(this))
         this.deck = new Deck(root.querySelector('.deck'));
         this.deck.on('wrongClick', this.handleDeckWrongClick.bind(this));
         this.deck.on('rightClick', this.handleDeckRightClick.bind(this));
@@ -24,6 +23,11 @@ export default class Main extends Component {
 
         this.reset = new Reset(root.querySelector('.reset'));
         this.reset.on('click', this.handleResetClick.bind(this));
+        // this.ModeToNumCard = [3,6,6];
+    }
+
+    handleChangeMode(firer, mode){
+        // this.deck.reset(this.ModeToNumCard[mode]);
     }
 
     handleDeckWrongClick(firer) {
