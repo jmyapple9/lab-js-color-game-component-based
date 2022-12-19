@@ -42,7 +42,7 @@ export default class Navbar extends Component {
         if(idx!==this.mode){
             this.mode = idx;
             this.reset();
-            console.log('mode: ',this.mode);
+            // console.log('mode: ',this.mode);
             this.fire('changeMode',this.mode);
         }
     }

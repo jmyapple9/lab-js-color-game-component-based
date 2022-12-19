@@ -134,4 +134,10 @@ export default class Deck extends Component {
         const random = Math.floor(Math.random() * num);
         return this.cards[random].getColor();
     }
+
+    DecktimesUp(){
+        for (let card of this.cards)
+            card.fadeIn("#FFF");
+        this.gameOver = true;
+    }
 }

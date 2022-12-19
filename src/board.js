@@ -16,7 +16,7 @@ export default class Board extends Component {
 
         this.colorDisplay = root.querySelector('.color-picked');
         this.messageDisplay = root.querySelector('.message');
-        this.countDisplay = root.querySelector('.count');
+        this.timeDisplay = root.querySelector('.count');
         this.reset(color);
     }
 
@@ -35,5 +35,14 @@ export default class Board extends Component {
 
     showWrongMessage() {
         this.messageDisplay.textContent = "Try Again";
+    }
+    
+    showTimesUpMessage(){
+        this.messageDisplay.textContent = "Times Up!";
+        this.timeDisplay.textContent = ""
+    }
+
+    showTimeCounting(time){
+        this.timeDisplay.textContent = "   " + time.toString();
     }
 }

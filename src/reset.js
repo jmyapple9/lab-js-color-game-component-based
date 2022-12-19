@@ -25,6 +25,7 @@ export default class Reset extends Component {
 
     showPlayAgain() {
         this.resetDisplay.textContent = "Play Again";
+        this.root.style.display = 'block';
     }
 
     handleDomClick(e) {
