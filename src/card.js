@@ -25,6 +25,7 @@ export default class Card extends Component {
         super(root);
 
         root.addEventListener("click", this.handleDomClick.bind(this));
+        // if(!showOrnot) this.root.style.display = 'none';
         this.reset();
     }
 

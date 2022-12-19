@@ -16,6 +16,7 @@ export default class Board extends Component {
 
         this.colorDisplay = root.querySelector('.color-picked');
         this.messageDisplay = root.querySelector('.message');
+        this.countDisplay = root.querySelector('.count');
         this.reset(color);
     }
 
